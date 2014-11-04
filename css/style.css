@@ -1,3 +1,7 @@
+/*============================*/
+/*    KEY FRAME ANIMATION     */
+/*============================*/
+
 @-webkit-keyframes right-swing {
   0% { transform: rotate(15deg); }
   50% { transform: rotate(-15deg); }
@@ -19,28 +23,220 @@
   50% { transform: rotate(15deg); }
   100% { transform: rotate(-15deg);}
 }
-#left-ear{
 
-	transform-origin: 100% 100%;
-	-moz-transform-origin: 100% 100%;
-  -webkit-animation: left-swing 3s ease infinite;
-  animation: left-swing 3s ease infinite;
+@keyframes clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
 
-/*  -webkit-animation: hideshow 10s ease infinite;*/
+  100% {
+    transform: rotate(360deg);
+    }
 }
 
+@-webkit-keyframes clockwise {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes blink {
+  0% {
+    transform: scaleY(1);
+  }
+  1% {
+    transform: scaleY(0);
+  }
+  3% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+    }
+}
+@-webkit-keyframes blink {
+  0% {
+    transform: scaleY(1);
+  }
+  1% {
+    transform: scaleY(0);
+  }
+  3% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+    }
+}
+
+/*============================*/
+/*           CLASSES          */
+/*============================*/
+.go-clockwise {
+  -webkit-animation: clockwise 5s infinite linear;
+  -moz-animation: clockwise 5s infinite linear;
+  animation: clockwise 5s infinite linear;
+}
+
+.left-swing {
+  -webkit-animation: left-swing 2s infinite ease-in-out;
+  -moz-animation: left-swing 2s infinite ease-in-out;
+  animation: left-swing 2s infinite ease-in-out;
+}
+.right-swing {
+  -webkit-animation: right-swing 2s infinite ease-in-out;
+  -moz-animation: right-swing 2s infinite ease-in-out;
+  animation: right-swing 2s infinite ease-in-out;
+}
+
+.blink {
+  -webkit-animation: blink 8s infinite ease-out;
+  -moz-animation: blink 8s infinite ease-out;
+  animation: blink 8s infinite ease-out;
+}
 body{
 	background-color: #74C198;
 }
+
+#full-pic{
+  width: 340px;
+  height: 360px;
+  position: absolute;
+}
+
+.bunny{
+  position: absolute;
+  width: 182px;
+  height: 331px;
+}
+.head{
+  position: absolute;
+  top:80px;
+  width: 182px;
+  height: 183px;  
+}
+.ears{
+  position: absolute;
+  top: -80px;
+  left: 12px;
+  width: 161px;
+  height: 119px;
+}
+
+.face{
+  position: absolute;
+  display: block;
+  width: 182px;
+  height: 183px;
+  background: url(../img/head.svg) no-repeat;
+}
 .l-ear{
-	transform-origin: 100% 100%;
-	-moz-transform-origin: 100% 100%;
-  -webkit-animation: left-swing 3s ease infinite;
-  animation: left-swing 3s ease infinite;
-	display: block;
-  text-indent: -9999px;
+  z-index: -1;
+  position: absolute;
+  display: block;
   width: 68px;
   height: 119px;
-  background-size: 100px 82px;
-	background: url(../img/test.svg) no-repeat;
+  background: url(../img/left-ear.svg) no-repeat;
 }
+
+.r-ear-centered{
+ transform: translate(-200px, -100px);
+}
+.r-ear-position{
+ transform: translate(200px, 100px);
+}
+.l-ear-centered{
+ transform: translate(-137px, -100px);
+}
+.l-ear-position{
+ transform: translate(137px, 100px);
+}
+.tail-centered{
+  transform: translate(-220px,-307px);
+}
+.tail-position{
+  transform: translate(220px,307px);
+}
+.face-centered{
+  transform: translate(-166px,-260px);
+}
+.face-position{
+  transform: translate(166px,260px);
+}
+.eyes-centered{
+  transform: translate(-170px,-192px);
+}
+.eyes-position{
+  transform: translate(170px,192px);
+}
+
+.l-brow{
+  z-index: 1;
+  position: absolute;
+  display: block;
+  transform: translate(32px,144px);
+  width: 26px;
+  height: 9px;
+  background: url(../img/left-brow.svg) no-repeat;
+}
+
+.r-brow{
+  z-index: 1;
+  position: absolute;
+  display: block;
+  transform: translate(122px,144px);
+  width: 26px;
+  height: 9px;
+  background: url(../img/right-brow.svg) no-repeat;
+}
+.eyes{
+  position: absolute;
+  left: 35px;
+  top: 167px;
+}
+
+.l-eye{
+  z-index: 1;
+  position: absolute;
+  display: block;
+  width: 23px;
+  height: 23px;
+  background: url(../img/left-eye.svg) no-repeat;
+}
+
+.r-eye{
+  z-index: 1;
+  position: absolute;
+  display: block;
+  left:88px;
+  width: 23px;
+  height: 23px;
+  background: url(../img/right-eye.svg) no-repeat;
+}
+
+.nose{
+  z-index: 1;
+  position: absolute;
+  display: block;
+  transform: translate(77px,199px);
+  width: 32px;
+  height: 19px;
+  background: url(../img/nose.svg) no-repeat;
+}
+
+
+
+.m-body{
+  z-index: -1;
+  position: absolute;
+  display: block;
+  transform: translate(36px,233px);
+  width: 114px;
+  height: 98px;
+  background: url(../img/main-body.svg) no-repeat; 
+}
+
