@@ -76,6 +76,10 @@
 /*============================*/
 /*           CLASSES          */
 /*============================*/
+body{
+  background-color: #74C198;
+}
+
 .go-clockwise {
   -webkit-animation: clockwise 5s infinite linear;
   -moz-animation: clockwise 5s infinite linear;
