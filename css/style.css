@@ -32,7 +32,7 @@
 body{
 	background-color: #74C198;
 }
-.test{
+.l-ear{
 	transform-origin: 100% 100%;
 	-moz-transform-origin: 100% 100%;
   -webkit-animation: left-swing 3s ease infinite;
@@ -42,5 +42,5 @@ body{
   width: 68px;
   height: 119px;
   background-size: 100px 82px;
-	background: url(img/test.svg) no-repeat;
+	background: url(../img/test.svg) no-repeat;
 }
