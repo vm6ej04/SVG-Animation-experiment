@@ -1,8 +1,8 @@
 SVG-Animation-experiment
 ========================
+
 Attempts log
 -------------------------------------------
-
 3/Nov/2014
 ------------------------------------------- 
 -Tried in-line SVG, trying to animate, noticed the CSS needs vendor prefix to work in Chrome.
@@ -16,7 +16,6 @@ However use SVG as img works for my purpose for now, won't look into it more at 
 -Notice that the anti-alias rendering in FireFox isn't that great. Saw some white bits along the viewbox edge. Adjusted the SVG width/height to whole number, didn't help.
 
 -------------------------------------------
-
 4/Nov/2014
 -------------------------------------------
 -Realised if I use SVG as background image, if I group them together with div, I can't really scale the whole thing together.
@@ -38,3 +37,14 @@ Basically
 -Came across the "z-index" layering problem. Apparently Z-index has no effects on inline SVG. Whichever lines of code comes first, it stays at the bottom layer.
 
 -Call it a day, done basic rotation animation and blinking. Planning to create rotating head, crinkle nose, subtle breathing
+
+-------------------------------------------
+5/Nov/2014
+-------------------------------------------
+-Last known anti-alias problem on 3/Nov. There seems to be gone for some reason. (I'm guessing it's the offset/repositioning hack for the transform origin that fixes it) I've also came across this article talking about it.
+
+Link:
+http://tympanus.net/codrops/2014/01/07/shape-hover-effect-with-svg/
+
+Quote:
+The SVG will also be positioned absolutely and we’ll stretch it over the item by setting the width and height to 100%. Giving it a top value of -1px instead of 0 will ensure that there is not strange line in Firefox (26.0 / Mac).
