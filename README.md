@@ -52,4 +52,4 @@ The SVG will also be positioned absolutely and we’ll stretch it over the item 
 -------------------------------------------
 6/Nov/2014
 -------------------------------------------
--Ran into a problem where the "viewbox" of the SVG cut off the animation. The fix was to change the viewbox x coordinate to -5, thus pus the content to the right by 5 pixel. I feel like it's not a proper fix, but at least it works!
+-Ran into a problem where the "viewbox" of the SVG cut off the animation. The fix was to change the viewbox x coordinate to -5, thus push the content to the right by 5 pixel. I feel like it's not a proper fix, but at least it works!
