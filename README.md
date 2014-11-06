@@ -48,3 +48,8 @@ http://tympanus.net/codrops/2014/01/07/shape-hover-effect-with-svg/
 
 Quote:
 The SVG will also be positioned absolutely and we’ll stretch it over the item by setting the width and height to 100%. Giving it a top value of -1px instead of 0 will ensure that there is not strange line in Firefox (26.0 / Mac).
+
+-------------------------------------------
+6/Nov/2014
+-------------------------------------------
+-Ran into a problem where the "viewbox" of the SVG cut off the animation. The fix was to change the viewbox x coordinate to -5, thus pus the content to the right by 5 pixel. I feel like it's not a proper fix, but at least it works!
