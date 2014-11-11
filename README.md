@@ -1,4 +1,8 @@
-demo: http://bigkdesign.com/svg_bunny/
+SVG-Animation
+===================
+Demo: http://bigkdesign.com/svg_bunny/
+
+
 -------------------------------------------
 3/Nov/2014
 ------------------------------------------- 
